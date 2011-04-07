@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HttpWithObjectiveCViewController : UIViewController {
-    
+    NSData* responseData; 
 }
+
+@property (nonatomic, retain) NSData* responseData;
 
 @end

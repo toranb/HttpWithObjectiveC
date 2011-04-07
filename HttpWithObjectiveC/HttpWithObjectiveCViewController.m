@@ -9,9 +9,11 @@
 #import "HttpWithObjectiveCViewController.h"
 
 @implementation HttpWithObjectiveCViewController
+@synthesize responseData;
 
 - (void)dealloc
 {
+    [responseData release];
     [super dealloc];
 }
 
@@ -23,15 +25,37 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - View lifecycle
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
+- (void) viewDidLoad
 {
-    [super viewDidLoad];
+    responseData = [NSMutableData new];
+    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    
+    [request setHTTPMethod:@"GET"];
+    
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
-*/
+
+- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [responseData setLength:0];
+}
+
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection {
+    [connection release];
+    
+    NSString* responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"the html from google was %@", responseString);
+    
+    [responseString release];
+}
+
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"something very bad happened here");
+}
 
 - (void)viewDidUnload
 {
