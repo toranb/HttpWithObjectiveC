@@ -23,14 +23,14 @@
 		5DB3076E134D4EEF0074CD9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5DB30770134D4EEF0074CD9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5DB30772134D4EEF0074CD9A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5DB30776134D4EEF0074CD9A /* HttpWithObjectiveC-Info.plist */ = {isa = PBXFileReference; path = "HttpWithObjectiveC-Info.plist"; sourceTree = "<group>"; };
+		5DB30776134D4EEF0074CD9A /* HttpWithObjectiveC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HttpWithObjectiveC-Info.plist"; sourceTree = "<group>"; };
 		5DB30778134D4EEF0074CD9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5DB3077A134D4EEF0074CD9A /* HttpWithObjectiveC-Prefix.pch */ = {isa = PBXFileReference; path = "HttpWithObjectiveC-Prefix.pch"; sourceTree = "<group>"; };
+		5DB3077A134D4EEF0074CD9A /* HttpWithObjectiveC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HttpWithObjectiveC-Prefix.pch"; sourceTree = "<group>"; };
 		5DB3077B134D4EEF0074CD9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5DB3077D134D4EEF0074CD9A /* HttpWithObjectiveCAppDelegate.h */ = {isa = PBXFileReference; path = HttpWithObjectiveCAppDelegate.h; sourceTree = "<group>"; };
+		5DB3077D134D4EEF0074CD9A /* HttpWithObjectiveCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpWithObjectiveCAppDelegate.h; sourceTree = "<group>"; };
 		5DB3077E134D4EEF0074CD9A /* HttpWithObjectiveCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpWithObjectiveCAppDelegate.m; sourceTree = "<group>"; };
 		5DB30781134D4EEF0074CD9A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		5DB30783134D4EEF0074CD9A /* HttpWithObjectiveCViewController.h */ = {isa = PBXFileReference; path = HttpWithObjectiveCViewController.h; sourceTree = "<group>"; };
+		5DB30783134D4EEF0074CD9A /* HttpWithObjectiveCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpWithObjectiveCViewController.h; sourceTree = "<group>"; };
 		5DB30784134D4EEF0074CD9A /* HttpWithObjectiveCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpWithObjectiveCViewController.m; sourceTree = "<group>"; };
 		5DB30787134D4EEF0074CD9A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HttpWithObjectiveCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
