@@ -10,9 +10,11 @@
 
 @implementation HttpWithObjectiveCViewController
 @synthesize responseData;
+@synthesize cookies;
 
 - (void)dealloc
 {
+    [cookies release];
     [responseData release];
     [super dealloc];
 }
@@ -61,6 +63,22 @@
 
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"something very bad happened here");
+}
+
+- (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSHTTPURLResponse *)response {
+    
+    if (response != nil) { 
+        NSArray* authToken = [NSHTTPCookie 
+                              cookiesWithResponseHeaderFields:[response allHeaderFields] 
+                              forURL:[NSURL URLWithString:@""]];
+        
+        if ([authToken count] > 0) {
+            [self setCookies:authToken];
+            NSLog(@"cookies property %@", self.cookies);
+        }
+    }
+    
+    return request;
 }
 
 - (void)viewDidUnload

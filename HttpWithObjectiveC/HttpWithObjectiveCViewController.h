@@ -10,8 +10,10 @@
 
 @interface HttpWithObjectiveCViewController : UIViewController {
     NSData* responseData; 
+    NSArray* cookies;
 }
 
 @property (nonatomic, retain) NSData* responseData;
+@property (nonatomic, retain) NSArray* cookies;
 
 @end
