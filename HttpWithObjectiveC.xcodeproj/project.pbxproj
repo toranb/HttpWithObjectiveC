@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0C6D5713513E31006ECF21 /* DoHttpPostWithCookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C6D5613513E31006ECF21 /* DoHttpPostWithCookie.m */; };
 		5DB3076F134D4EEF0074CD9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB3076E134D4EEF0074CD9A /* UIKit.framework */; };
 		5DB30771134D4EEF0074CD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB30770134D4EEF0074CD9A /* Foundation.framework */; };
 		5DB30773134D4EEF0074CD9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB30772134D4EEF0074CD9A /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0C6D5513513E31006ECF21 /* DoHttpPostWithCookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoHttpPostWithCookie.h; sourceTree = "<group>"; };
+		5D0C6D5613513E31006ECF21 /* DoHttpPostWithCookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoHttpPostWithCookie.m; sourceTree = "<group>"; };
 		5DB3076A134D4EEF0074CD9A /* HttpWithObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HttpWithObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB3076E134D4EEF0074CD9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5DB30770134D4EEF0074CD9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +87,8 @@
 				5DB30780134D4EEF0074CD9A /* MainWindow.xib */,
 				5DB30783134D4EEF0074CD9A /* HttpWithObjectiveCViewController.h */,
 				5DB30784134D4EEF0074CD9A /* HttpWithObjectiveCViewController.m */,
+				5D0C6D5513513E31006ECF21 /* DoHttpPostWithCookie.h */,
+				5D0C6D5613513E31006ECF21 /* DoHttpPostWithCookie.m */,
 				5DB30786134D4EEF0074CD9A /* HttpWithObjectiveCViewController.xib */,
 				5DB30775134D4EEF0074CD9A /* Supporting Files */,
 			);
@@ -167,6 +172,7 @@
 				5DB3077C134D4EEF0074CD9A /* main.m in Sources */,
 				5DB3077F134D4EEF0074CD9A /* HttpWithObjectiveCAppDelegate.m in Sources */,
 				5DB30785134D4EEF0074CD9A /* HttpWithObjectiveCViewController.m in Sources */,
+				5D0C6D5713513E31006ECF21 /* DoHttpPostWithCookie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +285,7 @@
 				5DB3078D134D4EEF0074CD9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

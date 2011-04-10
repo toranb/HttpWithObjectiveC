@@ -16,4 +16,6 @@
 @property (nonatomic, retain) NSData* responseData;
 @property (nonatomic, retain) NSArray* cookies;
 
+- (void) returnHtmlFromPost:(NSString *)responseString;
+
 @end

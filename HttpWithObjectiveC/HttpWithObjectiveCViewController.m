@@ -7,6 +7,7 @@
 //
 
 #import "HttpWithObjectiveCViewController.h"
+#import "DoHttpPostWithCookie.h"
 
 @implementation HttpWithObjectiveCViewController
 @synthesize responseData;
@@ -59,6 +60,10 @@
     NSLog(@"the html from google was %@", responseString);
     
     [responseString release];
+    
+    //hack - start the next request here :|
+    DoHttpPostWithCookie* service = [[DoHttpPostWithCookie alloc] initWithViewController:self];
+    [service startHttpRequestWithCookie:self.cookies];
 }
 
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -79,6 +84,12 @@
     }
     
     return request;
+}
+
+- (void) returnHtmlFromPost:(NSString *)responseString
+{
+    //this is called from the new object we created when the "connectionDidFinishLoading" is complete
+    NSLog(@"got this response back from the post with cookies %@", responseString);
 }
 
 - (void)viewDidUnload
