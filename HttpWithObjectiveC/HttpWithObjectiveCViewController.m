@@ -28,10 +28,16 @@
 - (void) viewDidLoad
 {
     responseData = [NSMutableData new];
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    NSURL *url = [NSURL URLWithString:@"http://toranbillups.com/phone/AddSuggestion"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     
-    [request setHTTPMethod:@"GET"];
+    NSData *requestData = [@"name=testname&suggestion=testing123" dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody: requestData];
     
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
